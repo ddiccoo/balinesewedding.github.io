@@ -401,35 +401,35 @@ END:VCALENDAR`;
 }
 
 // ----- CLICKABLE IMAGE ----- //
-document.addEventListener("DOMContentLoaded", () => {
-  const lightbox = document.getElementById("lightbox");
-  const lbImg = document.getElementById("lightbox-img");
-  const lbCaption = document.getElementById("lightbox-caption");
-  const closeBtn = lightbox.querySelector(".close");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const lightbox = document.getElementById("lightbox");
+//   const lbImg = document.getElementById("lightbox-img");
+//   const lbCaption = document.getElementById("lightbox-caption");
+//   const closeBtn = lightbox.querySelector(".close");
 
-  function openLightbox(trigger) {
-    const img = trigger.querySelector("img");
-    const bigSrc = trigger.dataset.large || img.src; // pakai data-large kalau ada
-    lbImg.src = bigSrc;
-    lbCaption.textContent = trigger.dataset.caption || img.alt;
-    lightbox.classList.add("open");
-    document.body.style.overflow = "hidden";
-  }
+//   function openLightbox(trigger) {
+//     const img = trigger.querySelector("img");
+//     const bigSrc = trigger.dataset.large || img.src; // pakai data-large kalau ada
+//     lbImg.src = bigSrc;
+//     lbCaption.textContent = trigger.dataset.caption || img.alt;
+//     lightbox.classList.add("open");
+//     document.body.style.overflow = "hidden";
+//   }
 
-  function closeLightbox() {
-    lightbox.classList.remove("open");
-    document.body.style.overflow = "";
-    lbImg.src = "";
-  }
+//   function closeLightbox() {
+//     lightbox.classList.remove("open");
+//     document.body.style.overflow = "";
+//     lbImg.src = "";
+//   }
 
-  document.addEventListener("click", (e) => {
-    const parent = e.target.closest(".clickable-parent");
-    if (parent) {
-      openLightbox(parent);
-      return;
-    }
-    if (e.target === lightbox || e.target.classList.contains("close")) {
-      closeLightbox();
-    }
-  });
-});
+//   document.addEventListener("click", (e) => {
+//     const parent = e.target.closest(".clickable-parent");
+//     if (parent) {
+//       openLightbox(parent);
+//       return;
+//     }
+//     if (e.target === lightbox || e.target.classList.contains("close")) {
+//       closeLightbox();
+//     }
+//   });
+// });
