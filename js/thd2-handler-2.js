@@ -1,8 +1,3 @@
-/*
- * PUTU MAHA GIRINDA PRABA
- * mailto:mahagirinda@gmail.com
- */
-
 // ----- CENTER MODAL LAUNCH ----- //
 (function ($) {
   "use strict";
